@@ -1,0 +1,24 @@
+# Routes
+
+#Default route:
+GET     /      controllers.AppController.index
+
+
+#call Action: 1 (def listPosts)
+GET     /posts      controllers.PostController.listPosts
+
+
+#call Action: 2  (def createPost)
+POST    /posts      controllers.PostController.createPost
+
+
+#call Action: 3  (def readPost)
+GET    /posts/:id     controllers.PostController.readPost(id: reactivemongo.bson.BSONObjectID)
+
+
+#call Action: 4  (def updatePost)
+PUT  /posts/:id     controllers.PostController.updatePost(id: reactivemongo.bson.BSONObjectID)
+
+
+#Action: 5  (def deletePost)
+DELETE    /posts/:id    controllers.PostController.deletePost(id: reactivemongo.bson.BSONObjectID)
